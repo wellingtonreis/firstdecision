@@ -103,3 +103,7 @@ A `Makefile` is included in the project to simplify common tasks. You can use th
     serve:
 	    php artisan serve
     ```
+
+    ## API Testing
+
+    The project includes a `.http` file for testing the REST API. You can use tools like [HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html) in JetBrains IDEs or [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) in Visual Studio Code to execute the API tests defined in this file.
