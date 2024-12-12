@@ -3,6 +3,7 @@
 namespace App\UseCases\RegisterUser;
 
 use App\Repositories\Auth\UserRepositoryInterface;
+use Illuminate\Support\Facades\Log;
 
 class RegisterUserUseCase {
     
@@ -21,7 +22,8 @@ class RegisterUserUseCase {
             
             return RegisterUserResponse::success('Usuário registrado com sucesso.');
         } catch (\Exception $e) {
-            return RegisterUserResponse::error($e->getMessage());
+            Log::error($e->getMessage());
+            return RegisterUserResponse::error('Ops, algo deu errado. Tente novamente mais tarde.');
         }
     }
 }

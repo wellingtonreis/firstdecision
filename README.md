@@ -64,3 +64,42 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Instructions to Run the technical challenges
+
+To get started with the Laravel project, follow these steps:
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-repository/firstdecision.git
+    cd firstdecision
+    ```
+
+2. **Start the Docker containers:**
+    ```bash
+    docker-compose up -d --build
+    ```
+
+4. **Run the Laravel migrations:**
+    ```bash
+    docker-compose exec laravel-app php artisan migrate
+    ```
+
+Your Laravel application should now be up and running. You can access it at `http://localhost:8000`.
+
+## Makefile
+
+A `Makefile` is included in the project to simplify common tasks. You can use the following commands:
+
+- **Run Laravel unit tests:**
+    ```bash
+    make test
+    ```
+
+- **Run Laravel artisan commands:**
+    ```bash
+    make serve
+
+    serve:
+	    php artisan serve
+    ```

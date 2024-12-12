@@ -31,13 +31,13 @@ class RegisterController extends Controller
                 $request->password_confirmation
             )
         );
-        
+
         if ($response->outcome) {
             return redirect()->route('register.index')
                 ->with('success', $response->message);
         }
 
-        if($response->outcome) {
+        if(!$response->outcome) {
             return redirect()->back()->with('error', $response->message);
         }
     }
