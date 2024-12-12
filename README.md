@@ -75,7 +75,12 @@ To get started with the Laravel project, follow these steps:
     cd firstdecision
     ```
 
-2. **Start the Docker containers:**
+2. **Create the `postgres-data` directory:**
+    ```bash
+    mkdir -p postgres-data
+    ```
+
+3. **Start the Docker containers:**
     ```bash
     docker-compose up -d --build
     ```
